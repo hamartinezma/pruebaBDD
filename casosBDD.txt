@@ -1,4 +1,3 @@
-
 ANALISTA: HECTOR ALEXANDER MARTINEZ
 FECHA: 11/01/2019
 CASOS DE PRUEBA. Version 1.0
@@ -10,30 +9,35 @@ CASOS DE PRUEBA. Version 1.0
 Feature: Un usuario requiere un aumento de cupo de su tarjeta de crédito
 
 
-Scenario: login en el portal de reevaluación de lineas de crédito
-Given: que tengo que generar la solicitud
-When: 
-And
+Scenario: login en el portal dispuesto para reevaluación de lineas de crédito
+Given: yo estoy ingresando al portal con mis credenciales
+When: espero visualizar el formulario de reevaluaciones
+Then: puedo ver el módulo para ingreso de solicitudes
 
 Scenario: registro de solicitud de aumento de cupo de TC
-Given: que tengo que generar la solicitud
-When: 
-And
+Given: el formulario de registro de solicitudes
+And: los datos del cliente
+When: inicio el registro de los datos
+Then: finalizo el registro
+And: genero una solicitud
 
 Scenario: validacion de los datos entregados por el usuario
-Given: que tengo que generar la solicitud
-When: 
-And
+Given: poseo una solicitud
+When: yo puedo ingresar con perfil de validador
+And: tramitar la peticion
+Then: la peticion queda pendiente de calificacion
 
 Scenario: calificacion de la solicitud para definir el aumento de cupo
-Given: que tengo que generar la solicitud
-When: 
-And
+Given: tengo una solicitud lista para calificar
+When: yo puedo ingresar con perfil calificador
+And: aprobar los montos para el cliente
+Then: la solicitud queda pendiente de aprobación
 
 Scenario: aceptacion de la solicitud en el sistema que finaliza 
-Given: que tengo que generar la solicitud
-When: 
-And
+Given: tengo una solicitud en estado aprobado
+When: puedo ingresar al portal unificado
+And: yo puedo aceptar la solicitud
+Then: se envia la actualizacion a todos los sistemas para replicar los cambios
 
 
 
@@ -41,39 +45,42 @@ And
 --COMPRA DE PRODUCTO EN EL PORTAL DEL COMERCIO
 --****************************
 
-Feature: Como cliente quiero comprar un producto en el portal web de un Retail
+Feature: Como cliente quiero comprar un producto en un portal de un comercio
 
-Scenario: registro y login en el portal de compras
-Given: que tengo que ingresar al portal web del comercio
-When 
-Then: 
-And:
+Scenario: valida si el cliente se encuentra registrado en el portal
+Given: yo tengo el número de documento del cliente
+When: puedo validar en la BD si existe
+Then: puedo informarle si puede ingresar
+
+Scenario: registro en el portal de compras
+Given: yo tengo los datos del cliente
+When: puedo ingresar los datos en un formulario
+And: puedo registrar los datos
+Then: confirmaré el registro
 
 
-Scenario: registro y login en el portal de compras
-Given: que tengo que ingresar al portal web del comercio
-When 
-Then: 
-And:
+Scenario: login en el portal de compras
+Given: tengo el numero de documento y clave, values:
+
+    # Values
+    | username | admin |
+    | root     | admin |
+When: consulta en la BD si hay coincidencias
+Then: se puede mostrar la pagina principal
 
 
 Scenario: buscar producto
-Given: que tengo que ingresar al portal web del comercio
-When 
-Then: 
-And:
-
+Given: tengo la palabra clave del producto a buscar
+When: puedo enviar la busqueda del producto
+Then: puedo visualizar los resultados
 
 Scenario: cargar producto en la bolsa de compras
-Given: que tengo que ingresar al portal web del comercio
-When 
-Then: 
-And:
+Given: teniendo identificado el producto deseado 
+When: puedo selecionar el item 
+Then: puedo ver el producto cargado en la bolsa de compras
 
 
 Scenario: efectuar compra del producto
-Given: que tengo que ingresar al portal web del comercio
-When 
-Then: 
-And:
-
+Given: teniendo el producto listo en la bolsa de compras
+When: puedo dar clic en el boton de confirmar compra
+Then: se muestra una ventana confirmando la compra
