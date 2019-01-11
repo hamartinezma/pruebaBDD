@@ -11,7 +11,6 @@ When Necesite abrir el portal de busquedas de Google
 Then Podre buscar e ingresar al sitio web de Falabella
 
 
-
 Scenario: buscar producto, ver detalle y agregarlo a la bolsa de productos.
 
 Given Que tengo que buscar un producto desde la barra de busqueda
