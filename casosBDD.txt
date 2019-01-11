@@ -1,1 +1,79 @@
 
+ANALISTA: HECTOR ALEXANDER MARTINEZ
+FECHA: 11/01/2019
+CASOS DE PRUEBA. Version 1.0
+
+
+--****************************
+--AUMENTO DE CUPO DE LA TARJETA DE CRÉDITO
+--****************************
+Feature: Un usuario requiere un aumento de cupo de su tarjeta de crédito
+
+
+Scenario: login en el portal de reevaluación de lineas de crédito
+Given: que tengo que generar la solicitud
+When: 
+And
+
+Scenario: registro de solicitud de aumento de cupo de TC
+Given: que tengo que generar la solicitud
+When: 
+And
+
+Scenario: validacion de los datos entregados por el usuario
+Given: que tengo que generar la solicitud
+When: 
+And
+
+Scenario: calificacion de la solicitud para definir el aumento de cupo
+Given: que tengo que generar la solicitud
+When: 
+And
+
+Scenario: aceptacion de la solicitud en el sistema que finaliza 
+Given: que tengo que generar la solicitud
+When: 
+And
+
+
+
+--****************************
+--COMPRA DE PRODUCTO EN EL PORTAL DEL COMERCIO
+--****************************
+
+Feature: Como cliente quiero comprar un producto en el portal web de un Retail
+
+Scenario: registro y login en el portal de compras
+Given: que tengo que ingresar al portal web del comercio
+When 
+Then: 
+And:
+
+
+Scenario: registro y login en el portal de compras
+Given: que tengo que ingresar al portal web del comercio
+When 
+Then: 
+And:
+
+
+Scenario: buscar producto
+Given: que tengo que ingresar al portal web del comercio
+When 
+Then: 
+And:
+
+
+Scenario: cargar producto en la bolsa de compras
+Given: que tengo que ingresar al portal web del comercio
+When 
+Then: 
+And:
+
+
+Scenario: efectuar compra del producto
+Given: que tengo que ingresar al portal web del comercio
+When 
+Then: 
+And:
+
