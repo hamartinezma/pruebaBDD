@@ -5,7 +5,7 @@ Diseño de pruebas bajo el esquema BDD (Desarrollo guiado por comportamiento)
 # 1- Definir los casos de prueba para los sisguientes escenarios:
   Aumento de cupo de TC
   Compra de producto en la web de un retail
-  ***Se anexa documento a la carpeta documentos
+  ***Se anexa .txt con los casos de prueba
 
 # 2- Automatizar una compra en el portal de Falabella
   Pendientes:
